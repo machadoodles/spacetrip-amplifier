@@ -1,36 +1,26 @@
 <div>
-  <mat-toolbar color="primary">
+    <mat-toolbar color="primary">
 
 
-    <span>Spacetrip: Amplifier</span>
+        <span>Spacetrip: Amplifier</span>
 
-    <button mat-icon-button [mat-menu-trigger-for]="menu">
-      <mat-icon>more_vert</mat-icon>
-    </button>
-  </mat-toolbar>
-  <mat-menu x-position="before" #menu="matMenu">
-    <button mat-menu-item>Option 1</button>
-    <button mat-menu-item>Option 2</button>
-  </mat-menu>
+        <button mat-icon-button [mat-menu-trigger-for]="menu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+    </mat-toolbar>
+    <mat-menu x-position="before" #menu="matMenu">
+        <button mat-menu-item>Option 1</button>
+        <button mat-menu-item>Option 2</button>
+    </mat-menu>
 
-  <mat-card>
-    <button mat-button>All</button>
-    <button mat-raised-button>Of</button>
-    <button mat-raised-button color="primary">The</button>
-    <button mat-raised-button color="accent">Buttons</button>
-  </mat-card>
+    <mat-card>
+        <!-- <button mat-button>All</button>
+    <button mat-raised-button>Of</button> -->
+        <a routerLink="kevin-proj"><button mat-raised-button color="primary">Project</button></a>
+        <a routerLink="design-page"><button mat-raised-button color="accent">Design</button></a>
+        <button mat-raised-button>Team</button>
+        <button mat-raised-button>Inspiration</button>
 
-  <span class="done">
-    <button mat-fab>
-      <mat-icon>check circle</mat-icon>
-    </button>
-  </span>
+    </mat-card>
 </div>
-<div>
-  <mat-tab-group>
-    <mat-tab label="Predator"> <img src="http://www.impulsegamer.com/articles/wp-content/uploads/2017/05/Predator-2.jpg"></mat-tab>
-    <mat-tab label="Alien"> <img src="http://sdmetalcrew.org/site/wp-content/uploads/2014/12/aliens_fire_stone_4_4.jpg"></mat-tab>
-    <mat-tab label="AVP"> <img src="https://i.pinimg.com/736x/f1/f2/4c/f1f24cccd34fd9d4e6feb838cdea8fd6.jpg">
-    </mat-tab>
-  </mat-tab-group>
-</div>
+<router-outlet></router-outlet>
